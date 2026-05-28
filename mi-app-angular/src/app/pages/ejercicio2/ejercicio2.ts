@@ -28,8 +28,8 @@ export class Ejercicio2 {
       return;
     }
 
-    if (this.nombre.trim() === '') {
-      this.estado = 'Por favor, ingrese su nombre antes de continuar.';
+    if (this.nombre.length <3) {
+      this.estado = 'Por favor, ingrese más caracteres.';
       return;
     }
 
