@@ -1,1 +1,31 @@
-<p>ejercicio2 works!</p>
+<main class="contenedor">
+  <section class="tarjeta">
+    <h1>Laboratorio Angular - Cálculo de IMC</h1>
+    <p class="descripcion">
+      Ingrese su peso y altura, presione Procesar y observe cómo Angular actualiza los resultados sin recargar la
+      página.
+    </p>
+
+    <div class="formulario">
+      <label type="text">Nombre:</label>
+      <input type="text" [(ngModel)]="nombre" minlength="3" maxlength="100">
+      <br>
+      <br>
+      <label type="correo">Correo:</label>
+      <input type="email" [(ngModel)]="correo" (input)="validarEmail()" minlength="5" maxlength="100">
+      <br>
+      <br>
+      <label>Peso (kg):</label>
+      <input type="number" [(ngModel)]="peso" min="10" max="300" step="0.1">
+      <br>
+      <br>
+      <label>Altura (m):</label>
+      <input type="number" [(ngModel)]="altura" min="0" max="2.5" step="0.01">
+      <br>
+      <br>
+      <div class="botones">
+        <button (click)="procesar()">Procesar</button>
+      </div>
+      <div>
+        <p><strong>Estado:</strong> {{estado}} </p>
+      </div>

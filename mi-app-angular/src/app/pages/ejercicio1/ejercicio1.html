@@ -1,1 +1,29 @@
-<p>ejercicio1 works!</p>
+<h1>Laboratorio Pregunta 2</h1>
+<div class="formulario">
+    <label>Nota 1:</label>
+    <input type="number" [(ngModel)]="n1" min="0" max="20">
+    <br>
+    <br>
+    <label>Nota 2</label>
+    <input type="number" [(ngModel)]="n2" min="0" max="20">
+    <br>
+    <br>
+    <label>Nota 3</label>
+    <input type="number" [(ngModel)]="n3" min="0" max="20">
+    <br>
+    <br>
+    <label>Nota 4</label>
+    <input type="number" [(ngModel)]="n4" min="0" max="20">
+    <br>
+    <br>
+    <button type="button" (click)="procesar()">Resultado</button>
+    <button type="button" (click)="limpiar()">Limpiar</button>
+    <br>
+    <br>
+    <div>
+        <p><strong>suma:</strong>{{suma}}</p>
+        <p><strong>promedio:</strong>{{promedio}}</p>
+        <p><strong>estado académico:</strong>{{estado}}</p>
+        <p><strong>observación:</strong>{{observacion}}</p>
+    </div>
+</div>
